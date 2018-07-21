@@ -72,7 +72,7 @@ struct Make_Env {
                 templateDir = Path(templateDirOpt).absolute().description
             }
             if lauchTemplateFileOpt.count > 0{
-                templateFile = Path(lauchTemplateFileOpt).absolute().description
+                templateFile = lauchTemplateFileOpt
             }
             
             let environment = Environment(loader: FileSystemLoader(paths: [Path(templateDir)]))
